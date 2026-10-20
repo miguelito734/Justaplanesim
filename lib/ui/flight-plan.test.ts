@@ -14,5 +14,5 @@ test('flight planning modes respect 30-minute fast threshold',()=>{
  const jet=aircraft.find(a=>a.id==='e195')!;
  assert.equal(estimatedMinutes('SBGR','SBSP',jet,'rapido'),5);
  assert.equal(estimatedMinutes('SBGR','FACT',jet,'rapido'),15);
- assert.ok(estimatedMinutes('SBGR','FACT',jet,'normal')<estimatedMinutes('SBGR','FACT',jet,'realista'));
+ assert.ok(estimatedMinutes('SBGR','FACT',jet,'normal')!<estimatedMinutes('SBGR','FACT',jet,'realista')!);
 });
